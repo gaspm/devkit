@@ -1,0 +1,23 @@
+{
+  "LANG": "EN",
+  "general_reload": "Reload",
+  "general_results": "Results",
+  "sidebar_donate": "I put a lot of work into this non-profit project to make it very usable for software engineers. <a href='{{link}}' target='_blank'>Buy me hot chocolate</a> ☕ to continue developing the project.",
+  "instant_header": "Your instant UUID v4",
+  "instant_header_reload_tooltip": "Click to reload UUID",
+  "form_label_namespace": "Namespace",
+  "form_label_name": "Name",
+  "form_label_count": "Count",
+  "form_label_multiple": "Multiple",
+  "form_label_uppercase": "Uppercase",
+  "form_button_generate": "Generate",
+  "form_button_clear": "Clear",
+  "form_button_copy": "Copy",
+  "form_button_download": "Download",
+  "message_required_count": "Count is so required :/",
+  "message_required_namespace": "Namespace is so required :/",
+  "message_min_count": "The minimum value must be ({{ min }})",
+  "message_max_count": "The maximum value must be ({{ max }})",
+  "message_invalid_UUID": "Invalid Namespace (UUID) :/",
+  "message_empty": "So Empty :/"
+}

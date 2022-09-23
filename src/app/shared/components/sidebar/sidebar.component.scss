@@ -1,0 +1,62 @@
+nav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: var(--nav-bg);
+  color: var(--nav-color);
+  width: 16.5rem;
+  text-align: left;
+  padding: 2rem;
+  z-index: 10001;
+  font-size: .85rem;
+
+  a {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active{
+      color: var(--nav-color);
+      text-decoration: none;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .donate{
+    a {
+      &:link,
+      &:visited,
+      &:hover,
+      &:active{
+        color: var(--nav-color-link);
+      }
+    }
+  }
+
+  .btn-close{
+    position: fixed;
+    right: .5rem;
+    top: .75rem;
+    font-size: var(--nav-action-fs);
+    cursor: pointer;
+  }
+
+  ul{
+    list-style: none;
+    padding-left: 0;
+    ul{
+      padding-left: 1rem;
+    }
+  }
+}
+
+.nav-backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.15);
+  z-index: 10000;
+}

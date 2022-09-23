@@ -1,0 +1,11 @@
+.instant {
+  background-color: var(--primary-color);
+  color: var(--high-text-color);
+  padding: 2rem 1rem;
+  div {
+    &.instant-id {
+      margin: .5rem auto;
+      font-size: 1.5rem;
+    }
+  }
+}

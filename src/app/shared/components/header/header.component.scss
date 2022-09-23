@@ -1,0 +1,18 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+
+  .top-nav{
+    display: flex;
+    .top-nav-item{
+      font-size: var(--nav-action-fs);
+      margin-left: 1rem;
+      .btn-open{
+        cursor: pointer;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+

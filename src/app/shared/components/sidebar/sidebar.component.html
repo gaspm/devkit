@@ -1,0 +1,15 @@
+<nav>
+  <span class="btn-close" (click)="close.emit(true)">[x]</span>
+  <p class="donate" [innerHTML]="'sidebar_donate' | translate: { link: 'https://www.paypal.com/donate/?hosted_button_id=W9UP7FDVZZGAE' }"></p>
+  <ul>
+    <li><a [routerLink]="['/']">UUID</a>
+      <ul>
+        <li><a [routerLink]="['/uuid', uuidVersionEnum.UUID_5]" (click)="close.emit(true)">UUID v5</a></li>
+        <li><a [routerLink]="['/uuid', uuidVersionEnum.UUID_4]" (click)="close.emit(true)">UUID v4</a></li>
+        <li><a [routerLink]="['/uuid', uuidVersionEnum.UUID_3]" (click)="close.emit(true)">UUID v3</a></li>
+        <li><a [routerLink]="['/uuid', uuidVersionEnum.UUID_1]" (click)="close.emit(true)">UUID v1</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<div class="nav-backdrop" (click)="close.emit(true)"></div>

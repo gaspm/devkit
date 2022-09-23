@@ -1,0 +1,166 @@
+{
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-empty-pattern": "off",
+    "no-prototype-builtins": "off",
+    "no-case-declarations": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "getter-return": "error",
+    "no-compare-neg-zero": "error",
+    "no-cond-assign": "error",
+    "no-console": [
+      "error",
+      {
+        "allow": ["debug", "info", "warn", "error", "groupCollapsed", "groupEnd"]
+      }
+    ],
+    "no-constant-condition": "error",
+    "no-control-regex": "error",
+    "no-debugger": "error",
+    "no-dupe-args": "error",
+    "no-dupe-keys": "error",
+    "no-duplicate-case": "error",
+    "no-empty": "error",
+    "no-empty-character-class": "error",
+    "no-ex-assign": "error",
+    "no-extra-boolean-cast": "error",
+    "no-extra-semi": "error",
+    "no-func-assign": "error",
+    "no-inner-declarations": "error",
+    "no-invalid-regexp": "error",
+    "no-irregular-whitespace": "error",
+    "no-regex-spaces": "error",
+    "no-sparse-arrays": "error",
+    "no-template-curly-in-string": "error",
+    "no-unexpected-multiline": "error",
+    "no-unreachable": "error",
+    "no-unsafe-negation": "error",
+    "valid-typeof": "error",
+    "curly": "error",
+    "eqeqeq": "error",
+    "max-classes-per-file": "error",
+    "no-alert": "error",
+    "no-fallthrough": "error",
+    "no-floating-decimal": "error",
+    "no-labels": "error",
+    "no-lone-blocks": "error",
+    "no-multi-spaces": "error",
+    "no-param-reassign": "error",
+    "no-return-assign": "error",
+    "no-self-assign": "error",
+    "no-self-compare": "error",
+    "no-unmodified-loop-condition": "error",
+    "no-useless-concat": "error",
+    "no-warning-comments": [
+      "error",
+      {
+        "terms": ["TODO", "FIXME", "FIX"]
+      }
+    ],
+    "radix": "error",
+    "no-nested-ternary": "error",
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "semi-style": "error",
+    "brace-style": ["error"],
+    "camelcase": ["error", { "properties": "never" }],
+    "constructor-super": "error",
+    "no-const-assign": "error",
+    "no-this-before-super": "error",
+    "prefer-const": "error",
+    "no-var": "error",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      { "selector": ["interface", "class"], "format": ["PascalCase"] },
+      { "selector": "variable", "format": ["camelCase", "UPPER_CASE", "PascalCase"] },
+      { "selector": "method", "format": ["camelCase"] }
+    ],
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true
+      }
+    ],
+    "@typescript-eslint/member-ordering": [
+      "error",
+      {
+        "default": [
+          // Index signature
+          "signature",
+
+          // Fields
+          "public-static-field",
+          "protected-static-field",
+          "private-static-field",
+
+          "public-instance-field",
+          "protected-instance-field",
+          "private-instance-field",
+
+          "public-abstract-field",
+          "protected-abstract-field",
+          "private-abstract-field",
+
+          "public-field",
+          "protected-field",
+          "private-field",
+
+          "static-field",
+          "instance-field",
+          "abstract-field",
+
+          "field",
+
+          // Constructors
+          "public-constructor",
+          "protected-constructor",
+          "private-constructor",
+
+          "constructor",
+
+          // Methods
+          "public-static-method",
+          "protected-static-method",
+          "private-static-method",
+
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method",
+
+          "public-abstract-method",
+          "protected-abstract-method",
+          "private-abstract-method",
+
+          "public-method",
+          "protected-method",
+          "private-method",
+
+          "static-method",
+          "instance-method",
+          "abstract-method",
+
+          "method"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-this-alias": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-useless-constructor": "error",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "Function": false,
+          "{}": false
+        }
+      }
+    ],
+    "@typescript-eslint/no-inferrable-types": "off"
+  }
+}

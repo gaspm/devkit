@@ -1,0 +1,98 @@
+<section>
+  <div class="frame">
+    <div class="title"><h2>UUID v{{ version }}</h2></div>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <div class="control-panel-row" *ngIf="expandedTool">
+        <div class="control-item">
+          <label [for]="'namespace_' + version">{{ 'form_label_namespace' | translate }}:</label>
+          <input type="text"
+                 [id]="'namespace_' + version"
+                 size="35"
+                 class="namespace"
+                 [placeholder]="nilUuid"
+                 formControlName="namespace">
+        </div>
+        <div class="control-item">
+          <label [for]="'name_' + version">{{ 'form_label_name' | translate }}:</label>
+          <input type="text"
+                 [id]="'name_' + version"
+                 size="15"
+                 class="name"
+                 formControlName="name">
+        </div>
+      </div>
+      <div class="control-panel-row">
+        <div class="control-item" *ngIf="expandedTool">
+          <label class="checkbox">{{ 'form_label_multiple' | translate }}
+            <input type="checkbox" checked="checked" formControlName="multiple">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="control-item">
+          <label class="checkbox">{{ 'form_label_uppercase' | translate }}
+            <input type="checkbox" formControlName="uppercase">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <div class="control-panel-row">
+        <span class="control-item">
+          <label [for]="'count_' + version">{{ 'form_label_count' | translate }}:</label>
+          <input type="number"
+                 [id]="'count_' + version"
+                 size="6"
+                 class="count"
+                 value="1" min="1"
+                 max="10000"
+                 numbersOnly
+                 formControlName="count">
+        </span>
+        <span class="control-item">
+          <button type="submit" [disabled]="formGroup.invalid">{{ 'form_button_generate' | translate }}</button>
+        </span>
+        <span class="control-item">
+          <input type="button" [value]="'form_button_clear' | translate" (click)="resetResults()">
+        </span>
+        <span class="control-item">
+          <input type="button" [value]="'form_button_copy' | translate" (click)="copyAll()">
+        </span>
+        <span class="control-item">
+          <a [download]="'uuids_v' + version + '.txt'" class="btn-link" (click)="processHref()" #downloadButton>
+            {{ 'form_button_download' | translate }}
+          </a>
+        </span>
+      </div>
+      <div class="form-messages">
+        <app-message *ngIf="formGroup.get('count')?.hasError('required')" [type]="messageType.ALERT">
+          {{ 'message_required_count' | translate }}
+        </app-message>
+        <app-message *ngIf="formGroup.get('namespace')?.hasError('required')" [type]="messageType.ALERT">
+          {{ 'message_required_namespace' | translate }}
+        </app-message>
+        <app-message
+          *ngIf="formGroup.get('namespace')?.hasError('valid') && formGroup.get('namespace')?.value?.length"
+          [type]="messageType.ALERT">
+          {{ 'message_invalid_UUID' | translate }}
+        </app-message>
+        <app-message *ngIf="formGroup.get('count')?.hasError('min')" [type]="messageType.ALERT">
+          {{ 'message_min_count' | translate: { min: minCount } }}
+        </app-message>
+        <app-message *ngIf="formGroup.get('count')?.hasError('max')" [type]="messageType.ALERT">
+          {{ 'message_max_count' | translate: { max: maxCount } }}
+        </app-message>
+      </div>
+      <div class="uuid-item-list">
+        <div class="uuid-item-list-heading">{{ 'general_results' | translate }}:</div>
+        <div class="uuid-item-list-messages">
+          <app-message *ngIf="!uuids.length" [type]="messageType.WARNING">
+            {{ 'message_empty' | translate }}
+          </app-message>
+        </div>
+        <div class="uuid-item-list-content" *ngIf="uuids.length">
+          <span class="uuid-item" *ngFor="let uuid of uuids; index as i;" (click)="copy(uuid)">{{ uuid }}
+        </span>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

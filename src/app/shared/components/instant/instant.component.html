@@ -1,0 +1,7 @@
+<div class="instant">
+  <div>{{ 'instant_header' | translate }}</div>
+  <div class="instant-id"><span (click)="copy()" title="Click to copy UUID" class="c-pointer">{{ uuid }}</span></div>
+  <div class="instant-panel">
+    <span class="instant-reload c-pointer" (click)="generateUUID()" [title]="'instant_header_reload_tooltip' | translate">{{ 'general_reload' | translate }}</span>
+  </div>
+</div>
