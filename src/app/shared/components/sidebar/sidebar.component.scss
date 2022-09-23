@@ -9,8 +9,10 @@ nav{
   padding: 2rem;
   z-index: 10001;
   font-size: .85rem;
+  height: 100vh;
 
   a {
+    font-size: 1rem;
     &:link,
     &:visited,
     &:hover,
@@ -24,7 +26,9 @@ nav{
   }
 
   .donate{
+    margin-bottom: 2rem;
     a {
+      font-size: .85rem;
       &:link,
       &:visited,
       &:hover,

@@ -2,6 +2,17 @@ header{
   display: flex;
   justify-content: space-between;
   z-index: 100;
+  color: var(--high-text-color);
+
+  a {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active{
+      color: var(--high-text-color);
+      text-decoration: none;
+    }
+  }
 
   .top-nav{
     display: flex;

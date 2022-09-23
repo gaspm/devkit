@@ -73,7 +73,7 @@ button,
 input[type="button"],
 .btn-link{
   background-color: var(--button-bg);
-  border: 1px solid var(--border-color);
+  border: none;
   padding: 0 1rem;
   text-align: center;
   text-decoration: none;
@@ -100,7 +100,7 @@ input[type=number] {
   width: 100%;
   padding: 0 1rem;
   color: var(--input-color) !important;
-  border: 1px solid var(--border-color);
+  border: none;
   height: 2rem;
   box-sizing: border-box;
   outline: none;
@@ -229,8 +229,8 @@ footer {
 
 main {
   &.generator {
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
 
     .control-panel-row {
       margin-bottom: 1rem;
