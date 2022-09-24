@@ -48,7 +48,7 @@ body {
     --input-bg: #505050;
     --input-bg-focus: #494949;
     --input-border-focus: #888888;
-    --input-disable-bg: #3a3a3a;
+    --input-disable-bg: #313131;
     --border-shadow: rgba(255, 255, 255, .2);
   }
 
@@ -89,9 +89,11 @@ input[type="button"],
   &:hover{
     background-color: var(--button-bg-hover);
   }
-  &:disabled{
+  &:disabled,
+  &.disabled{
     color: #c2c2c2;
-    background-color: #d5d5d5;
+    background-color: var(--input-disable-bg);
+    cursor: not-allowed;
   }
 }
 
@@ -156,10 +158,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 3rem;
+    height: 3.5rem;
     text-align: left;
-    padding: .5rem;
-    border-bottom: 1px solid var(--high-text-color);
+    padding: .75rem;
 
     h1 {
       font-family: 'IBM Plex Mono', monospace;

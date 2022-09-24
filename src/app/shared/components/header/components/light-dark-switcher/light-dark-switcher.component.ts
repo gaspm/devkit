@@ -1,13 +1,15 @@
-import { Component, Inject, Renderer2 } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { LightDarkEnum } from './light-dark.enum';
 import { DOCUMENT } from '@angular/common';
-import { LocalStorageKey } from '../../enums/local-storage-key.enum';
-import { LocalStorageService } from '../../services/local-storage.service';
+import { LocalStorageKey } from '../../../../enums/local-storage-key.enum';
+import { LocalStorageService } from '../../../../services/local-storage.service';
+
 @Component({
 	selector: 'app-light-dark-switcher',
 	templateUrl: './light-dark-switcher.component.html',
 	styleUrls: ['./light-dark-switcher.component.scss'],
 })
+
 export class LightDarkSwitcherComponent {
 	public lightDarkEnum = LightDarkEnum;
 	public theme: LightDarkEnum;

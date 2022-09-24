@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { v4 as uuidv4 } from 'uuid';
-import { MessageService } from '../../services/message.service';
-import { MessageTypeEnum } from '../message/mesage-type.enum';
-import { MessageDelayEnum } from '../message/message-delay.enum';
+import { MessageService } from '../../../../shared/services/message.service';
+import { MessageTypeEnum } from '../../../../shared/components/message/mesage-type.enum';
+import { MessageDelayEnum } from '../../../../shared/components/message/message-delay.enum';
 
 @Component({
 	selector: 'app-instant',

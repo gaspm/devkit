@@ -6,7 +6,7 @@ nav{
   color: var(--nav-color);
   width: 16.5rem;
   text-align: left;
-  padding: 2rem;
+  padding: 3rem 2rem;
   z-index: 10001;
   font-size: .85rem;
   height: 100vh;
@@ -40,8 +40,8 @@ nav{
 
   .btn-close{
     position: fixed;
-    right: .5rem;
-    top: .75rem;
+    right: 0.75rem;
+    top: 1rem;
     font-size: var(--nav-action-fs);
     cursor: pointer;
   }

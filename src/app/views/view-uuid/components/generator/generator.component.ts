@@ -1,13 +1,13 @@
 import { AfterViewInit, Component, ElementRef, Inject, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { UuidVersionEnum } from '../../constants/uuid-version.enum';
+import { UuidVersionEnum } from '../../../../shared/constants/uuid-version.enum';
 import { v1 as uuidv1, v3 as uuidv3, v4 as uuidv4, v5 as uuidv5, NIL as NIL_UUID } from 'uuid';
-import { MessageTypeEnum } from '../message/mesage-type.enum';
-import { MessageDelayEnum } from '../message/message-delay.enum';
-import { MessageService } from '../../services/message.service';
-import { DownloadUtil } from '../../utils/download.util';
+import { MessageTypeEnum } from '../../../../shared/components/message/mesage-type.enum';
+import { MessageDelayEnum } from '../../../../shared/components/message/message-delay.enum';
+import { MessageService } from '../../../../shared/services/message.service';
+import { DownloadUtil } from '../../../../shared/utils/download.util';
 import { DOCUMENT } from '@angular/common';
-import { uuidValidator } from '../../validators/uuid.validator';
+import { uuidValidator } from '../../../../shared/validators/uuid.validator';
 
 @Component({
 	selector: 'app-generator',

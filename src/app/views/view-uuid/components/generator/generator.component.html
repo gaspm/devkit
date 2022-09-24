@@ -51,13 +51,13 @@
           <button type="submit" [disabled]="formGroup.invalid">{{ 'form_button_generate' | translate }}</button>
         </span>
         <span class="control-item">
-          <input type="button" [value]="'form_button_clear' | translate" (click)="resetResults()">
+          <input type="button" [value]="'form_button_clear' | translate" (click)="resetResults()" [disabled]="!uuids.length">
         </span>
         <span class="control-item">
-          <input type="button" [value]="'form_button_copy' | translate" (click)="copyAll()">
+          <input type="button" [value]="'form_button_copy' | translate" (click)="copyAll()" [disabled]="!uuids.length">
         </span>
         <span class="control-item">
-          <a [download]="'uuids_v' + version + '.txt'" class="btn-link" (click)="processHref()" #downloadButton>
+          <a [download]="'uuids_v' + version + '.txt'" class="btn-link" (click)="processHref()" [appDisabled]="!uuids.length" #downloadButton>
             {{ 'form_button_download' | translate }}
           </a>
         </span>
