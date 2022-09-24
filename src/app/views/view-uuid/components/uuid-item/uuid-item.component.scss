@@ -1,0 +1,11 @@
+.uuid-item {
+  display: block;
+  padding: .25rem 1rem;
+  color: var(--high-text-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  &:hover {
+    color: var(--item-highlight-color);
+    background-color: var(--item-highlight-bg);
+  }
+}

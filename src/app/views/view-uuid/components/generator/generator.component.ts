@@ -8,6 +8,7 @@ import { MessageService } from '../../../../shared/services/message.service';
 import { DownloadUtil } from '../../../../shared/utils/download.util';
 import { DOCUMENT } from '@angular/common';
 import { uuidValidator } from '../../../../shared/validators/uuid.validator';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
 	selector: 'app-generator',
@@ -37,7 +38,12 @@ export class GeneratorComponent implements OnInit, AfterViewInit, OnChanges {
 
 	@ViewChild('downloadButton') downloadButton: ElementRef | undefined;
 
-	constructor(private fb: FormBuilder, private message: MessageService, @Inject(DOCUMENT) private document: Document) {
+	constructor(
+		private fb: FormBuilder,
+		private message: MessageService,
+		@Inject(DOCUMENT) private document: Document,
+		private translate: TranslateService
+	) {
 		//
 	}
 
@@ -90,7 +96,11 @@ export class GeneratorComponent implements OnInit, AfterViewInit, OnChanges {
 
 	public copyAll(): void {
 		navigator.clipboard.writeText(this.uuids.join('\r\n'));
-		this.message.create(`Copied (${this.uuids.length} items) to clipboard!`, MessageTypeEnum.SUCCESS, MessageDelayEnum.SHORT);
+		this.message.create(
+			this.translate.instant('message_copy', { count: this.uuids.length }),
+			MessageTypeEnum.SUCCESS,
+			MessageDelayEnum.SHORT
+		);
 	}
 
 	get expandedTool(): boolean {
@@ -99,11 +109,6 @@ export class GeneratorComponent implements OnInit, AfterViewInit, OnChanges {
 
 	public resetResults(): void {
 		this.uuids = [];
-	}
-
-	public copy(text: string): void {
-		navigator.clipboard.writeText(text);
-		this.message.create('Copied (1 item) to clipboard!', MessageTypeEnum.SUCCESS, MessageDelayEnum.SHORT);
 	}
 
 	ngOnInit(): void {

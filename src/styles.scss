@@ -8,10 +8,10 @@
 }
 
 body {
-  --primary-color: #1700c7;
+  --primary-color: #2c2c2c;
   --secondary-color: #efefef;
-  --heading-color: #1700c7;
-  --highlight-color: #110098;
+  --heading-color: #2c2c2c;
+  --highlight-color: #252525;
   --dark-color: #000;
   --border-color: #949494;
   --alert-color: #e01251;
@@ -26,7 +26,10 @@ body {
   --input-bg: #FFF;
   --input-bg-focus: #f6f5f5;
   --input-border-focus: #1700c7;
-  --input-disable-bg: #dfdfe3;
+  --input-disable-color: #707070;
+  --input-disable-bg: #d5d5d5;
+  --item-highlight-color: #efefef;
+  --item-highlight-bg: #565656;
   --border-shadow: rgba(0,0,0, .4);
   --nav-action-fs: 1rem;
   --nav-bg: #000;
@@ -34,11 +37,11 @@ body {
   --nav-color-link: deeppink;
 
   &.dark-theme {
-    --primary-color: #110098;
+    --primary-color: #2c2c2c;
     --secondary-color: #1c1c1c;
     --heading-color: #545454;
-    --high-text-color: #aab2fd;
-    --highlight-color: #1700c7;
+    --high-text-color: #c0c0c0;
+    --highlight-color: #3f3f3f;
     --text-color: #9b9b9b;
     --border-color: #7a7a7a;
     --button-bg: #414142;
@@ -81,17 +84,17 @@ input[type="button"],
   height: 2rem;
   line-height: 1.9rem;
   display: block;
-  color: var(--text-color) !important;
+  color: var(--text-color);
   &:active{
     color: inherit;
-    background-color: var(--button-bg-active) !important;
+    background-color: var(--button-bg-active);
   }
   &:hover{
     background-color: var(--button-bg-hover);
   }
   &:disabled,
   &.disabled{
-    color: #c2c2c2;
+    color: var(--input-disable-color);
     background-color: var(--input-disable-bg);
     cursor: not-allowed;
   }
@@ -114,6 +117,7 @@ input[type=number] {
   }
 
   &:disabled {
+    color: var(--input-disable-color) !important;
     background-color: var(--input-disable-bg);
     cursor: not-allowed;
   }
@@ -269,26 +273,13 @@ main {
         }
       }
     }
-
-    .uuid-item-list{
-      .uuid-item {
-        display: block;
-        padding: .25rem 1rem;
-        color: var(--high-text-color);
-        background-color: var(--primary-color);
-        cursor: pointer;
-        &:hover {
-          background-color: var(--highlight-color);
-        }
-      }
-    }
   }
 }
 
 #messages{
   position: fixed;
-  top: 4rem;
-  right: 1rem;
+  top: 5rem;
+  right: 2rem;
   z-index: 9999;
   .message{
     display: flex;

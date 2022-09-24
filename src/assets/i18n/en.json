@@ -19,5 +19,6 @@
   "message_min_count": "The minimum value must be ({{ min }})",
   "message_max_count": "The maximum value must be ({{ max }})",
   "message_invalid_UUID": "Invalid Namespace (UUID) :/",
-  "message_empty": "So Empty :/"
+  "message_empty": "So Empty :/",
+  "message_copy": "Copied ({{ count }}) to clipboard!"
 }

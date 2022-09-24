@@ -89,8 +89,7 @@
           </app-message>
         </div>
         <div class="uuid-item-list-content" *ngIf="uuids.length">
-          <span class="uuid-item" *ngFor="let uuid of uuids; index as i;" (click)="copy(uuid)">{{ uuid }}
-        </span>
+          <app-uuid-item *ngFor="let uuid of uuids; index as i;" [uuid]="uuid"></app-uuid-item>
         </div>
       </div>
     </form>

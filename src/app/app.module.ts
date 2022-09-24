@@ -19,6 +19,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ViewUuidComponent } from './views/view-uuid/view-uuid.component';
 import { DisabledDirective } from './shared/directives/disabled.directive';
+import { UuidItemComponent } from './views/view-uuid/components/uuid-item/uuid-item.component';
 
 @NgModule({
 	declarations: [
@@ -32,8 +33,9 @@ import { DisabledDirective } from './shared/directives/disabled.directive';
 		HeaderComponent,
 		LightDarkSwitcherComponent,
 		SidebarComponent,
-  ViewUuidComponent,
-  DisabledDirective,
+    ViewUuidComponent,
+    DisabledDirective,
+    UuidItemComponent,
 	],
 	imports: [
 		BrowserModule,
