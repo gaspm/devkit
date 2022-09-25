@@ -4,8 +4,9 @@ import { IndexComponent } from './views/index/index.component';
 import { ViewUuidComponent } from './views/view-uuid/view-uuid.component';
 
 const routes: Routes = [
+	{ path: '', redirectTo: '/uuid', pathMatch: 'full' },
 	{
-		path: '',
+		path: 'uuid',
 		component: IndexComponent,
 	},
 	{

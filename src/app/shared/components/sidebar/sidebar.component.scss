@@ -6,13 +6,12 @@ nav{
   color: var(--nav-color);
   width: 16.5rem;
   text-align: left;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   z-index: 10001;
   font-size: .85rem;
   height: 100vh;
 
   a {
-    font-size: 1rem;
     &:link,
     &:visited,
     &:hover,
@@ -49,6 +48,7 @@ nav{
   ul{
     list-style: none;
     padding-left: 0;
+    font-size: 1rem;
     ul{
       padding-left: 1rem;
     }

@@ -1,5 +1,5 @@
 <nav>
-  <span class="btn-close" (click)="close.emit(true)">[x]</span>
+  <span class="btn-close" (click)="close.emit(true)">{{ 'sidebar_menu_close' | translate }}</span>
   <p class="donate" [innerHTML]="'sidebar_donate' | translate: { link: 'https://www.paypal.com/donate/?hosted_button_id=W9UP7FDVZZGAE' }"></p>
   <ul>
     <li><a [routerLink]="['/']">UUID</a>

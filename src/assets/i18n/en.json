@@ -2,6 +2,8 @@
   "LANG": "EN",
   "general_reload": "Reload",
   "general_results": "Results",
+  "header_menu_open": "Menu",
+  "sidebar_menu_close": "Close",
   "sidebar_donate": "I put a lot of work into this non-profit project to make it very usable for software engineers. <a href='{{link}}' target='_blank'>Buy me hot chocolate</a> ☕ to continue developing the project.",
   "instant_header": "Your instant UUID v4",
   "instant_header_reload_tooltip": "Click to reload UUID",

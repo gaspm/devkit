@@ -32,9 +32,9 @@ body {
   --item-highlight-bg: #565656;
   --border-shadow: rgba(0,0,0, .4);
   --nav-action-fs: 1rem;
-  --nav-bg: #000;
+  --nav-bg: #2c2c2c;
   --nav-color: #d1d1d7;
-  --nav-color-link: deeppink;
+  --nav-color-link: var(--success-color);
 
   &.dark-theme {
     --primary-color: #2c2c2c;
