@@ -24,5 +24,6 @@
   "message_invalid_UUID": "Invalid UUID :/",
   "message_correct_UUID": "UUID is valid!",
   "message_empty": "So Empty :/",
-  "message_copy": "Copied ({{ count }}) to clipboard!"
+  "message_copy": "Copied ({{ count }}) to clipboard!",
+  "title_uuid_validator": "UUID Validator"
 }

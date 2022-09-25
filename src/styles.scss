@@ -8,6 +8,7 @@
 }
 
 body {
+  // Colors
   --primary-color: #2c2c2c;
   --secondary-color: #efefef;
   --heading-color: #2c2c2c;
@@ -35,6 +36,9 @@ body {
   --nav-bg: #2c2c2c;
   --nav-color: #d1d1d7;
   --nav-color-link: var(--success-color);
+
+  // Others
+  --margin: .5rem;
 
   &.dark-theme {
     --primary-color: #2c2c2c;
@@ -147,10 +151,10 @@ a {
   cursor: pointer !important;
 }
 
-.ml { margin-left: .5rem; }
-.mr { margin-right: .5rem; }
-.mt { margin-top: .5rem; }
-.mb { margin-bottom: .5rem; }
+.ml { margin-left: var(--margin); }
+.mr { margin-right: var(--margin); }
+.mt { margin-top: var(--margin); }
+.mb { margin-bottom: var(--margin); }
 
 header {
   &.main {

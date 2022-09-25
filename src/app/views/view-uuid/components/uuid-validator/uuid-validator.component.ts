@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MessageService } from '../../../../shared/services/message.service';
 import { DOCUMENT } from '@angular/common';
@@ -11,7 +11,7 @@ import { MessageTypeEnum } from '../../../../shared/components/message/mesage-ty
 	templateUrl: './uuid-validator.component.html',
 	styleUrls: ['./uuid-validator.component.scss'],
 })
-export class UuidValidatorComponent implements OnInit {
+export class UuidValidatorComponent {
 	public nilUuid = NIL_UUID;
 	public messageType = MessageTypeEnum;
 	public formGroup = this.fb.group({
@@ -22,11 +22,15 @@ export class UuidValidatorComponent implements OnInit {
 		//
 	}
 
-	clear(): void {
-		this.formGroup.get('uuid')?.reset();
+	get isValid(): boolean {
+		return !!(this.formGroup.get('uuid')?.hasError('valid') && this.formGroup.get('uuid')?.value?.length);
 	}
 
-	ngOnInit(): void {}
+	get isSuccess(): boolean {
+		return !!(!this.formGroup.get('uuid')?.hasError('valid') && this.formGroup.get('uuid')?.value?.length);
+	}
 
-	onSubmit(): void {}
+	public clear(): void {
+		this.formGroup.get('uuid')?.reset();
+	}
 }
