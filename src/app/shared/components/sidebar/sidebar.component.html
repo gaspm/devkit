@@ -4,10 +4,11 @@
   <ul>
     <li><a [routerLink]="['/']">UUID</a>
       <ul>
-        <li><a [routerLink]="['/uuid', uuidVersionEnum.UUID_5]" (click)="close.emit(true)">UUID v5</a></li>
-        <li><a [routerLink]="['/uuid', uuidVersionEnum.UUID_4]" (click)="close.emit(true)">UUID v4</a></li>
-        <li><a [routerLink]="['/uuid', uuidVersionEnum.UUID_3]" (click)="close.emit(true)">UUID v3</a></li>
-        <li><a [routerLink]="['/uuid', uuidVersionEnum.UUID_1]" (click)="close.emit(true)">UUID v1</a></li>
+        <li><a [routerLink]="['/uuid', uuidVersionEnum.UUID_5]">UUID v5</a></li>
+        <li><a [routerLink]="['/uuid', uuidVersionEnum.UUID_4]">UUID v4</a></li>
+        <li><a [routerLink]="['/uuid', uuidVersionEnum.UUID_3]">UUID v3</a></li>
+        <li><a [routerLink]="['/uuid', uuidVersionEnum.UUID_1]">UUID v1</a></li>
+        <li><a [routerLink]="['/uuid-validator']">UUID Validator</a></li>
       </ul>
     </li>
   </ul>

@@ -20,6 +20,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ViewUuidComponent } from './views/view-uuid/view-uuid.component';
 import { DisabledDirective } from './shared/directives/disabled.directive';
 import { UuidItemComponent } from './views/view-uuid/components/uuid-item/uuid-item.component';
+import { UuidValidatorComponent } from './views/view-uuid/components/uuid-validator/uuid-validator.component';
+import { ViewUuidValidatorComponent } from './views/view-uuid-validator/view-uuid-validator.component';
 
 @NgModule({
 	declarations: [
@@ -33,9 +35,11 @@ import { UuidItemComponent } from './views/view-uuid/components/uuid-item/uuid-i
 		HeaderComponent,
 		LightDarkSwitcherComponent,
 		SidebarComponent,
-    ViewUuidComponent,
-    DisabledDirective,
-    UuidItemComponent,
+		ViewUuidComponent,
+		DisabledDirective,
+		UuidItemComponent,
+		UuidValidatorComponent,
+		ViewUuidValidatorComponent,
 	],
 	imports: [
 		BrowserModule,

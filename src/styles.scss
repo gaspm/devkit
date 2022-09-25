@@ -123,6 +123,7 @@ input[type=number] {
   }
 
   &.ng-invalid{
+    border-style: solid;
     border-color: var(--alert-color);
     border-width: 2px;
   }
@@ -146,13 +147,10 @@ a {
   cursor: pointer !important;
 }
 
-.ml {
-  margin-left: .5rem;
-}
-
-.mr {
-  margin-right: .5rem;
-}
+.ml { margin-left: .5rem; }
+.mr { margin-right: .5rem; }
+.mt { margin-top: .5rem; }
+.mb { margin-bottom: .5rem; }
 
 header {
   &.main {

@@ -16,11 +16,13 @@
   "form_button_clear": "Clear",
   "form_button_copy": "Copy",
   "form_button_download": "Download",
+  "form_button_verify": "Verify!",
   "message_required_count": "Count is so required :/",
   "message_required_namespace": "Namespace is so required :/",
   "message_min_count": "The minimum value must be ({{ min }})",
   "message_max_count": "The maximum value must be ({{ max }})",
-  "message_invalid_UUID": "Invalid Namespace (UUID) :/",
+  "message_invalid_UUID": "Invalid UUID :/",
+  "message_correct_UUID": "UUID is valid!",
   "message_empty": "So Empty :/",
   "message_copy": "Copied ({{ count }}) to clipboard!"
 }

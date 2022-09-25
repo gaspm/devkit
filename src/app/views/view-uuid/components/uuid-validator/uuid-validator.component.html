@@ -1,0 +1,27 @@
+<section class="verify">
+  <div class="frame">
+    <div class="title"><h2>UUID Validator</h2></div>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <div class="form-content">
+        <div class="col col-l">
+          <input type="text" formControlName="uuid" [placeholder]="nilUuid">
+        </div>
+        <div class="col col-r">
+          <button type="submit" (click)="clear()">{{ 'form_button_clear' | translate }}</button>
+        </div>
+      </div>
+      <div class="form-messages mt">
+        <app-message
+          *ngIf="formGroup.get('uuid')?.hasError('valid') && formGroup.get('uuid')?.value?.length"
+          [type]="messageType.ALERT">
+          {{ 'message_invalid_UUID' | translate }}
+        </app-message>
+        <app-message
+          *ngIf="(!formGroup.get('uuid')?.hasError('valid')) && formGroup.get('uuid')?.value?.length"
+          [type]="messageType.SUCCESS">
+          {{ 'message_correct_UUID' | translate }}
+        </app-message>
+      </div>
+    </form>
+  </div>
+</section>
