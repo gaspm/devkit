@@ -10,11 +10,11 @@ import { GeneratorComponent } from './views/view-uuid/components/generator/gener
 import { MessageComponent } from './shared/components/message/message.component';
 import { OnlyNumberDirective } from './shared/directives/numbers-only.directive';
 import { InstantComponent } from './views/view-uuid/components/instant/instant.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
-import { HeaderComponent } from './shared/components/header/header.component';
-import { LightDarkSwitcherComponent } from './shared/components/header/components/light-dark-switcher/light-dark-switcher.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LightDarkSwitcherComponent } from './components/header/components/light-dark-switcher/light-dark-switcher.component';
 import { WindowRef } from './shared/services/window-ref.service';
-import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
