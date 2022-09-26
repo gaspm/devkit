@@ -1,16 +1,14 @@
 <nav>
   <span class="btn-close" (click)="close.emit(true)">{{ 'sidebar_menu_close' | translate }}</span>
-  <p class="donate" [innerHTML]="'sidebar_donate' | translate: { link: 'https://www.paypal.com/donate/?hosted_button_id=W9UP7FDVZZGAE' }"></p>
+  <p class="donate" [innerHTML]="'sidebar_donate' | translate: { link: ppDonate + env.ppDnt }"></p>
   <ul>
     <li *ngFor="let item of this.navItems">
       <a [routerLink]="item.url">{{ item.title }}</a>
-      <ng-container *ngIf="item?.sub?.length">
-        <ul>
-          <li *ngFor="let sub of item.sub">
-            <a [routerLink]="sub.url">{{ sub.title }}</a>
-          </li>
-        </ul>
-      </ng-container>
+      <ul *ngIf="item?.sub?.length">
+        <li *ngFor="let sub of item.sub">
+          <a [routerLink]="sub.url">{{ sub.title }}</a>
+        </li>
+      </ul>
     </li>
   </ul>
 </nav>

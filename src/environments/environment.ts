@@ -9,6 +9,7 @@ export const environment: EnvInterface = {
 	version: VERSION,
 	production: false,
 	ga: 'tracking-code',
+	ppDnt: 'hosted_button_id',
 };
 
 /*

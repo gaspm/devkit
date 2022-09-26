@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
 import { NavigationService } from '../../services/navigation-service';
 import { NavigationInterface } from '../../interfaces/navigation.interface';
+import { environment } from '../../../environments/environment';
 
 @Component({
 	selector: 'app-sidebar',
@@ -9,6 +10,8 @@ import { NavigationInterface } from '../../interfaces/navigation.interface';
 	encapsulation: ViewEncapsulation.None,
 })
 export class SidebarComponent {
+	public readonly ppDonate = 'https://www.paypal.com/donate/?hosted_button_id=';
+	public env = environment;
 	public navItems: Array<NavigationInterface> = [];
 	@Output() close = new EventEmitter<boolean>();
 
