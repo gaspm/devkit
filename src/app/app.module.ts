@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+
 import { AppComponent } from './app.component';
 import { IndexComponent } from './views/index/index.component';
 import { GeneratorComponent } from './views/view-uuid/components/generator/generator.component';
@@ -22,6 +23,7 @@ import { DisabledDirective } from './shared/directives/disabled.directive';
 import { UuidItemComponent } from './views/view-uuid/components/uuid-item/uuid-item.component';
 import { UuidValidatorComponent } from './views/view-uuid/components/uuid-validator/uuid-validator.component';
 import { ViewUuidValidatorComponent } from './views/view-uuid-validator/view-uuid-validator.component';
+import { environment } from '../environments/environment';
 
 @NgModule({
 	declarations: [
@@ -56,6 +58,8 @@ import { ViewUuidValidatorComponent } from './views/view-uuid-validator/view-uui
 				deps: [HttpClient],
 			},
 		}),
+		NgxGoogleAnalyticsModule.forRoot(environment.ga),
+		NgxGoogleAnalyticsRouterModule,
 	],
 	providers: [WindowRef],
 	bootstrap: [AppComponent],
